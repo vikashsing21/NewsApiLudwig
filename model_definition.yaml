@@ -1,0 +1,15 @@
+input_features:
+    -
+        name: title
+        type: text
+        encoder: rnn
+        cell_type: lstm
+        biderectional: true
+        level: word
+        
+output_features:
+    -
+        name: news_sentiment
+        type: category
+training:
+    epochs: 5
