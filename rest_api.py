@@ -106,5 +106,8 @@ def predictSports():
     return jsonify(response)
 
 
-if __name__ == '__main__':
-    app.run(host='localhost', port=8000, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='localhost', port=8000, debug=True)
+
+#     spacy==2.2.3
+# https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz#egg=en_core_web_sm==2.2.5
