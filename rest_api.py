@@ -61,6 +61,13 @@ def topSports():
                                                      country='in')
     return results(top_headlines_sports['articles'])
 
+def topBusiness():
+    top_headlines_business = newsapi.get_top_headlines(category='business',
+                                                     language='en',
+                                                     page_size=100,
+                                                     country='in')
+    return results(top_headlines_business['articles'])
+
 
 def topHealth():
     top_headlines_health = newsapi.get_top_headlines(category='health',
@@ -68,7 +75,6 @@ def topHealth():
                                                      page_size=100,
                                                      country='in')
     return results(top_headlines_health['articles'])
-
 
 def positivenews(newsData):
     posdata = []
@@ -130,6 +136,11 @@ def predictEnt():
 def predictSports():
     response = topSports()
     return jsonify(response)
+
+@app.route('/predict/business', methods=['GET'])
+def predictBusiness():
+    response = topBusiness()
+    return jsonify(response)    
 
 
 if __name__ == '__main__':
