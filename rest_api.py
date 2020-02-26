@@ -143,11 +143,6 @@ def predictBusiness():
     return jsonify(response)    
 
 
-@app.route('/predict/business', methods=['GET'])
-def predictBusiness():
-    response = topBusiness()
-    return jsonify(response)
-
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8000, debug=True)
